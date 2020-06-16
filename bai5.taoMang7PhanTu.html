@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tao mang voi 7 phan tu</title>
+</head>
+<body>
+<script>
+    let nameStar = prompt('nhap vao ten ngoi sao');
+    let arrStarName = ['Polaris','Aldebaran','Deneb','Vega','Altair','Dubhe','Regulus'];
+    let arrConstellationName = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+
+    function checkStarNameAndReturnItConstellation(starName) {
+        let ConstellationName;
+        for (let i = 0; i < arrStarName.length - 1; i++) {
+            if (starName === arrStarName[i]) {
+                ConstellationName = arrConstellationName[i];
+            } else if (arrStarName.includes(starName) === false){
+                ConstellationName = 'khong ton tai sao co ten la: ' + starName;
+            }
+        } alert(ConstellationName)
+    }
+    checkStarNameAndReturnItConstellation(nameStar);
+</script>
+</body>
+</html>
